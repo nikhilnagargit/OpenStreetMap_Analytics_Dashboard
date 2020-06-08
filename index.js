@@ -338,7 +338,7 @@ $(document).ready(function () {
     } catch (error) {
       console.log("error");
       alert(
-        "Too many requests. OSM server error. Please wait for some seconds , before making new requests."
+        "Too many requests.OSM server error. Please wait for some seconds , before making new requests. OR This may due to hosting service not allowed external api request.If you get this error constantly, go to github code and download it and run index.html"
       );
       $(`.databox>input[name="${data_type}"]`).prop("checked", false);
     }
