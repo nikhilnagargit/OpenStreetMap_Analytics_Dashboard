@@ -1,0 +1,158 @@
+#map {
+  border: 2px solid seagreen;
+  flex-grow: 1;
+  margin: 5px;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#markerform {
+  z-index: 5000;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border: 3px solid coral;
+  padding: 0.3em;
+}
+body {
+  /* background-image: url("images/water.jpg"); */
+  background-color: white;
+}
+.navbar {
+  padding: 0em 0em;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+input[type="checkbox"] {
+  zoom: 2;
+}
+
+#userinputbox {
+  border: 2px solid salmon;
+  padding: 0.3em;
+}
+/* input data checkboxes css */
+#checkboxgroup {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#checkboxgroup > div {
+  display: flex;
+  font-size: 1rem;
+  color: lightsalmon;
+  justify-content: left;
+  align-items: center;
+  background-color: black;
+  border: 3px solid lightsalmon;
+
+  min-width: 200px;
+}
+
+.interface {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#pagebox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: paleturquoise;
+  }
+  #pagebox {
+    flex-direction: column;
+  }
+  .interface {
+    flex-direction: row;
+  }
+}
+
+#spinner {
+  position: absolute;
+  z-index: 1000;
+  right: 30%;
+  top: 10%;
+}
+
+/* spinner css start */
+
+.configure-border-1 {
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  animation: configure-clockwise 2s ease-in-out 0s infinite alternate;
+}
+
+.configure-border-2 {
+  width: 60px;
+  height: 60px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid orangered;
+  transform: rotate(45deg);
+  animation: configure-xclockwise 2s ease-in-out 0s infinite alternate;
+}
+
+.configure-core {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes configure-clockwise {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes configure-xclockwise {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-135deg);
+  }
+  75% {
+    transform: rotate(-225deg);
+  }
+  100% {
+    transform: rotate(-315deg);
+  }
+}
+
+/* spinner css finish */
